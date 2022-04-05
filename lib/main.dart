@@ -53,6 +53,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int number = 0; //การสร้าง State หรือตัวแปร
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,7 +71,16 @@ class _MyHomePageState extends State<MyHomePage> {
               "Hello Flutter",
               style: TextStyle(fontSize: 50, color: Colors.blue),
             ),
+            Text("กดปุ่มเพื่อเพิ่มจำนวน"),
+            Text(
+              "$number",
+              style: TextStyle(fontSize: 40, color: Colors.red),
+            )
           ]),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: Icon(Icons.add),
         ));
   }
 }
